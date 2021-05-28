@@ -40,7 +40,8 @@ if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
     HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
   fi
   HOMEBREW_CACHE="${HOME}/Library/Caches/Homebrew"
-  HOMEBREW_CORE_DEFAULT_GIT_REMOTE="https://github.com/Homebrew/homebrew-core"
+  # HOMEBREW_CORE_DEFAULT_GIT_REMOTE="https://github.com/Homebrew/homebrew-core"
+  HOMEBREW_CORE_DEFAULT_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 
   STAT="stat -f"
   CHOWN="/usr/sbin/chown"
@@ -62,7 +63,8 @@ else
   GROUP="$(id -gn)"
   TOUCH="/bin/touch"
 fi
-HOMEBREW_BREW_DEFAULT_GIT_REMOTE="https://github.com/Homebrew/brew"
+# HOMEBREW_BREW_DEFAULT_GIT_REMOTE="https://github.com/Homebrew/brew"
+HOMEBREW_BREW_DEFAULT_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
 
 # Use remote URLs of Homebrew repositories from environment if set.
 HOMEBREW_BREW_GIT_REMOTE="${HOMEBREW_BREW_GIT_REMOTE:-"${HOMEBREW_BREW_DEFAULT_GIT_REMOTE}"}"
